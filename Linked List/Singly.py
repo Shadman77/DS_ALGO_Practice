@@ -71,6 +71,12 @@ def add_nth(node, value, n, i = 1, prev_node = None):
             prev_node.set_next_node_addr(new_node)
     else:
         add_nth(node.get_next_node_addr(), value, i+1, node)
+    
+def get_length(node):
+    if node == None:
+        return 0
+    else:
+        return get_length(node.get_next_node_addr()) + 1
 
 
 
@@ -81,6 +87,8 @@ if __name__ == "__main__":
     add(header, 4)
     add(header, 5)
     traverse(header)
+
+    print("Length is = ", get_length(header))
 
 
     delete_last(header)
