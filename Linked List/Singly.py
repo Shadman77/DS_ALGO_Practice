@@ -46,19 +46,19 @@ def delete_last(header):
         delete_last(next_node)
 
 
-def delete_nth(header, n, i=1):
-    next_node = header.get_next_node_addr()
-    if n == 1:
-        header.set_value(next_node.get_value())
-        header.set_next_node_addr(next_node.get_next_node_addr())
-    elif next_node == None:
-        header.set_value(None)
-    elif i == n-1:
-        header.set_next_node_addr(next_node.get_next_node_addr())
-    elif next_node.get_next_node_addr() == None:
-        header.set_next_node_addr(None)
+def delete_nth(node, n, previous_node = None, i=1):
+    if node == None:
+        return
+    
+    if i == n:
+        if previous_node == None:
+            node.set_value(node.get_value())
+            node.set_next_node_addr(node.get_next_node_addr())
+        else:
+            previous_node.set_next_node_addr(node.get_next_node_addr())
+        return
     else:
-        delete_nth(next_node, n, i + 1)
+        delete_nth(node = node.get_next_node_addr(), n=n, previous_node=node, i=i+1)
 
 def add_nth(node, value, n, i = 1, prev_node = None):
     if n == i:
