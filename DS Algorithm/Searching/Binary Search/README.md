@@ -7,7 +7,7 @@
 
 # Algo
 
-    binarySearch(a, n, data){
+    int binarySearch(a, n, data){
 
         l = 0, r = n-1;
 
