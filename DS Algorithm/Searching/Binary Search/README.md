@@ -7,18 +7,19 @@
 
 # Algo
 
-binarySearch(a, n, data){
-    l = 0, r = n-1;
-    
-    while(l<r){
-            mid = (l+r)/2;
+    binarySearch(a, n, data){
 
-            if(data == a[mid])
-                 return mid;
-            else if(data < a[mid])
-                 r = mid-1;
-            else 
-                 l = mid+1;
+        l = 0, r = n-1;
+
+        while(l<r){
+                mid = (l+r)/2;
+
+                if(data == a[mid])
+                     return mid;
+                else if(data < a[mid])
+                     r = mid-1;
+                else 
+                     l = mid+1;
+        }
+        return -1;
     }
-    return -1;
-}
