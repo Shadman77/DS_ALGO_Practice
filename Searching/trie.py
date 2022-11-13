@@ -46,6 +46,19 @@ def search(node, word):
         return [word, False]
     return [word, True]
 
+def delete_word(node, word):
+    for char in word:
+        try:
+            node = node.get_next_node(char)
+            print(node)
+        except KeyError:
+            return [word, False]
+    print(node)
+    if not node.get_is_end_of_word():
+        return [word, False]
+    node.set_is_end_of_word(False)
+    return [word, True]
+
 
 if __name__ == "__main__":
     start_node = Node()
@@ -73,4 +86,10 @@ if __name__ == "__main__":
     print(search(start_node, "apple"), end="\n\n")
     print(search(start_node, "starting"), end="\n\n")
     print(search(start_node, "stopping"), end="\n\n")
+    print(search(start_node, "sit"), end="\n\n")
+
+    insert(start_node, "sit")
+    print()
+    print(search(start_node, "sit"), end="\n\n")
+    delete_word(start_node, "sit")
     print(search(start_node, "sit"), end="\n\n")
