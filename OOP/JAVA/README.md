@@ -58,6 +58,12 @@ finalize: Is like a destructor whenever object will be removed from the memory b
 
     if(obj1.equals(obj2)) // return true;
 
+11. Polymorphism: Reference variable belong to the parent. And, object belogs to the child
+     Parent ref = new Child(); //run time polymorphim..
+
+12. For an abstract class you can't create object for it. Not have defination, only have name.
+
+
 
 
 
