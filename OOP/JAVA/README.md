@@ -46,6 +46,18 @@ finalize: Is like a destructor whenever object will be removed from the memory b
 
 4. Difference between Stack and Heap memory.
 
+10. Difference between equals and '=='
+    '==' compare the references. Reference address same or not.
+
+    equals compare the object values
+
+    obj1 = new Obj("Hello");
+    obj2 = new Obj("Hello");
+    
+    if(obj1 == obj2) // return false. because of different references
+
+    if(obj1.equals(obj2)) // return true;
+
 
 
 
