@@ -110,6 +110,27 @@ No, not suppoted.
 
 18. A block is exectued when obj is created of a class. and a static block is executed when the class is loaded to the memory.
 
+19. What is a servlet?
+
+->java servlet is serve side technologies to extend the capbility of web servers by providing support for dynamic response and data persistence.
+->The javax.servlet and javax.servlet.http packages provide interfaces and classes fro writing our own servlets.
+->All servlets must impplement the javax.servlet.Servlet interface, which defines servlet lifecycle methods.
+->As most web applications are accessed useing HTTP protocol, we mostly extend HttpServlet class. Servlet API hierarchy.
+
+20. GET VS POST
+
+GET:
+->Data send through URL. So, limited amount of data can be sent.
+->Not secured
+->More efficient
+
+POST:
+->Large amount of data can be sent. Because data sent in body.
+->Secured
+->It is less efficient.
+
+
+
 
 
 
