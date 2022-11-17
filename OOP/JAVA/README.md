@@ -61,7 +61,57 @@ finalize: Is like a destructor whenever object will be removed from the memory b
 11. Polymorphism: Reference variable belong to the parent. And, object belogs to the child
      Parent ref = new Child(); //run time polymorphim..
 
-12. For an abstract class you can't create object for it. Not have defination, only have name.
+12. For an abstract class you can't create object for it. Not have defination, only have name. If parent class has N nubmer of abstract class. N number of abstruct class you have to redefine with defination in child class.
+  <code>
+   //Object to Object inheritance
+    abstract class Shape{
+        Shape(){
+            //constructor
+        }
+        abstruct void draw(); //no def
+    }
+
+    class Circle extends Shape{
+        void draw(){
+            //code
+        }
+    }
+  </code>
+
+13. Interface 100% abstruction. All method  will be abstuct and public.Variable are not instance variable it will be static variable. Neither you nor run time create the object. 
+    //not Object to Object inheritance
+    <code>
+      interface Shape{
+        // no constructor
+        void draw(); //public and abstruct 
+      }
+
+    class Circle implements Shape{
+        public void draw(){
+            //code
+        }
+      }
+    </code>
+
+14. What is polymorphism or dynamic method dispatch?
+    -> It is a process in which a call to an override method is resolved at runtime rather than at complile-time.
+    -> In this process, an overridden method is called through the reference variable of a superclass.
+    -> The determination of the method to be called is based on the object being referred to by the reference variable.
+
+15. Overloading vs Overriden method.
+
+
+16. Can you override private and static method in java?   
+ ->No, private method cann't override.
+ -> If you create a similar method with same return type and same method arguments in child class then it will hide the super class method. This is known as method hiding. If child class method have to be static.
+
+17. Multiple inheritance or daimond shape problem?
+No, not suppoted.
+
+18. A block is exectued when obj is created of a class. and a static block is executed when the class is loaded to the memory.
+
+
+
 
 
 
