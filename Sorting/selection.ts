@@ -3,7 +3,7 @@ enum SortDirection {
   DESC = "desc",
 }
 
-const insertion = (
+const selection = (
   arr: number[],
   sortingDirection: SortDirection
 ): number[] => {
@@ -30,5 +30,5 @@ const insertion = (
 
 const ques: number[] = [5, 4, 8, 9, 10];
 console.log(ques);
-console.log(insertion(ques, SortDirection.ASC));
-console.log(insertion(ques, SortDirection.DESC));
+console.log(selection(ques, SortDirection.ASC));
+console.log(selection(ques, SortDirection.DESC));
